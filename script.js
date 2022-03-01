@@ -41,14 +41,21 @@ console.log(weapons.length);
 for(var i = 1; i <= 100; i++){
     var newh3 = document.createElement("h3");
     newh3.appendChild(document.createTextNode("Accusation " + i));
-    //While you could just set the id of each h3 to the loop index and use that to determine array positions, that's considered cheating for this lab
-    newh3.id = i;
-    newh3.addEventListener("click", function()
-    {
-        var friend = friends[(this.id - 1) % 5];
-        var location = locations[(this.id - 1) % 10];
-        var weapon = weapons[(this.id - 1) % 20];
-        alert("I accuse " + friend + ", with the " + weapon + " in the " + location + "!");
-    })
+    //newh3.id = i;
+    //Now let's try to solve it the "proper" way using closure!
+    var alertFunc = makeAlert();
+    newh3.addEventListener("click", alertFunc);
     document.body.appendChild(newh3);
+}
+
+function makeAlert()
+{
+    //console.log("Value of i in MakeAlert:" + i);
+    var friend = friends[(i - 1) % 5];
+    var place = locations[(i - 1) % 10];
+    var weapon = weapons[(i- 1) % 20];
+    function alertMessage(){
+        alert("I accuse " + friend + ", with the " + weapon + " in the " + place + "!");
+    }
+    return alertMessage;
 }
