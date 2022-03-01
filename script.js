@@ -15,25 +15,25 @@ var locations = [
 
 var weapons = [
     "Microwave",
-    "Range",
-    "Blender",
-    "Piano",
-    "Shredder",
-    "Toilet",
-    "Stapler",
+    "Ceiling Fan",
     "Candle Warmer",
-    "Treadmill",
+    "Toilet",
+    "Lamp Cord",
+    "Shredder",
     "Exercise Bicylce",
-    "Kettlebell Weights",
+    "Piano",
+    "Range",
     "Post Hole Digger",
-    "Digger Tamping Bar",
+    "Blender",
+    "Carving Knife",
     "Hair Curler",
+    "Stapler",
+    "Treadmill",
+    "Kettlebell Weights",
     "Hair Dryer",
     "Insinkerator",
-    "Carving Knife",
     "Staple Remover",
-    "Lamp Cord",
-    "Ceiling Fan"
+    "Digger Tamping Bar"
 ]
 
 console.log(weapons.length);
